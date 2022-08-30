@@ -10,5 +10,7 @@ AppDataSource.initialize().then(() => {
 
     app.use(routes);
 
-    return app.listen(process.env.PORT);
+    return app.listen(process.env.PORT, () => {
+        console.log(`Server running on port ${process.env.PORT}!`);
+    });
 })
